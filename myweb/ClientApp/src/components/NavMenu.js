@@ -9,15 +9,15 @@ export class NavMenu extends Component {
 
   render() {
     return (
-      <Navbar inverse fixedTop fluid collapseOnSelect>
+    <Navbar className="navbarMaxWidth narvar1" inverse fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to={'/'}>myWeb</Link>
+            <Link to={'/'}>Yoonkun Lee's Website</Link>
           </Navbar.Brand>
-          <Navbar.Toggle />
+          
         </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
+            <Navbar.Collapse>
+            <Nav>
             <LinkContainer to={'/'} exact>
               <NavItem>
                 <Glyphicon glyph='home' /> Home

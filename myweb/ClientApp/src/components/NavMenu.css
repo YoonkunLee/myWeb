@@ -17,6 +17,9 @@
         height: 100%;
         width: calc(25% - 20px);
     }
+    .navbarMaxWidth {
+        width: 100%;
+    }
     .navbar {
         border-radius: 0;
         border-width: 0;
@@ -37,10 +40,10 @@
         margin: 0;
     }
     .navbar ul {
-        float: none;
+        float: left;
     }
     .navbar li {
-        float: none;
+        float: left;
         font-size: 15px;
         margin: 6px;
     }
@@ -54,5 +57,9 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .navbar1{
+        float:left;
+        width: 20%;
     }
 }

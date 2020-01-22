@@ -8,10 +8,10 @@ export class Layout extends Component {
   render() {
     return (
       <Grid fluid>
-        <Row>
-          <Col sm={3}>
+            <Row>
+            <div sm={3} className="navbarMaxWidth">
             <NavMenu />
-          </Col>
+          </div>
           <Col sm={9}>
             {this.props.children}
           </Col>
