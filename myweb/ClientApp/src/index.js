@@ -17,3 +17,7 @@ ReactDOM.render(
   rootElement);
 
 registerServiceWorker();
+
+$(document).ready(function(){
+    var imageSlider = new ImageSlider(".image-slider");
+});      
