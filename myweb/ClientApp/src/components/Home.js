@@ -1,24 +1,58 @@
-import React, { Component } from 'react';
-import SimpleImageSlider from "react-simple-image-slider";
+import React from 'react';
+import { Slide } from "react-simple-image";
 
-export class Home extends React.Component {
+export class Home {
     render() {
-        const images = [
-            { url: "myWeb\myweb\ClientApp\src\images\battlefield1.jpg" },
-            { url: "src\components\images\battlefield2.jpg" },
-            { url: "src\components\images\battlefield2.jpg" },
-            { url: "src\components\images\battlefield2.jpg" },
-            { url: "src\components\images\battlefield2.jpg" },
+        const slideImages = [
+            'images/battlefield1.jpg',
+            'images/battlefield2.jpg',
+            'images/battlefield3.jpg',
+            'images/battlefield4.jpg',
+            'images/battlefield5.jpg'
         ];
 
-        return (
-            <div>
-                <SimpleImageSlider
-                    width={400}
-                    height={300}
-                    images={images}
-                />
-            </div>
-        );
+        const properties = {
+            duration: 5000,
+            transitionDuration: 500,
+            infinite: true,
+            indicators: true,
+            arrows: true,
+            onChage: (oldIndex, newIndex) => {
+                console.log('slide transition from ${oldIndex} to ${newIndex}');
+            }
+        }
+        const Slideshow = () => {
+            return (
+                <div className="slide-container">
+                    <Slide {...properties}>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': 'url(${slideImages[0]}' }}>
+                                <span>Slide 1</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': 'url(${slideImages[1]}' }}>
+                                <span>Slide 2</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': 'url(${slideImages[2]}' }}>
+                                <span>Slide 3</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': 'url(${slideImages[3]}' }}>
+                                <span>Slide 4</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': 'url(${slideImages[4]}' }}>
+                                <span>Slide 5</span>
+                            </div>
+                        </div>
+                    </Slide>
+                </div>
+            )
+        }        
     }
 }  
